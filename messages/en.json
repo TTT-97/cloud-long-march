@@ -1,0 +1,44 @@
+{
+  "common": {
+    "brandName": "云上长征",
+    "brandTagline": "Cloud Long March",
+    "loading": "Loading...",
+    "error": "Page Error",
+    "notFound": "Page Not Found"
+  },
+  "homepage": {
+    "museumTitle": "Cloud Long March Digital Museum",
+    "museumSubtitle": "A Cultural Journey Through Sichuan's Red Heritage Produce",
+    "exploreMap": "Explore the Map",
+    "galleryTitle": "Product Gallery",
+    "culturalIntroTitle": "The Living Spirit of the Long March",
+    "culturalIntroText": "Each product from Sichuan carries a moving story from the Long March. From the snow-capped highlands to the towering Jianmen Pass, from Mengding tea plantations to the Chishui River Valley, the footsteps of the Red Army and the warmth of local communities have crystallized into these precious gifts of the land."
+  },
+  "product": {
+    "storyTitle": "The Long March Story",
+    "productTitle": "Product Story",
+    "originTitle": "Place of Origin",
+    "culturalTitle": "Cultural Heritage",
+    "backToHome": "Back to Home",
+    "languageLabel": "Language",
+    "audioPlay": "Play",
+    "audioPause": "Pause",
+    "audioListenCN": "聆听长征故事",
+    "audioListenEN": "Listening to the Long March Story",
+    "audioTapToListen": "Tap to Listen to the Story",
+    "audioStoryPaused": "Story Paused",
+    "scrollDown": "Scroll Down to Explore"
+  },
+  "audio": {
+    "chinese": "中文",
+    "english": "English",
+    "duration": "Duration",
+    "progress": "Progress"
+  },
+  "footer": {
+    "copyright": "© 2026 Cloud Long March 云上长征. All rights reserved.",
+    "about": "About",
+    "contact": "Contact",
+    "privacy": "Privacy"
+  }
+}

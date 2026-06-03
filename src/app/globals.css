@@ -1,0 +1,176 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* ===== 云上长征 · 品牌设计令牌 ===== */
+@theme inline {
+  /* Brand Colors */
+  --color-deep-red: #8B1E24;
+  --color-deep-red-dark: #6B1519;
+  --color-gold: #D4AF37;
+  --color-gold-light: #E8D48B;
+  --color-cream: #F8F5F0;
+  --color-cream-dark: #EDE8E0;
+  --color-dark: #2A2A2A;
+  --color-dark-light: #3D3D3D;
+
+  /* shadcn/ui mapped tokens */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+
+  /* Typography */
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-heading: var(--font-heading);
+
+  /* Radius */
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+/* ===== Light Theme (Default) ===== */
+:root {
+  --background: #F8F5F0;
+  --foreground: #2A2A2A;
+  --card: #F8F5F0;
+  --card-foreground: #2A2A2A;
+  --popover: #F8F5F0;
+  --popover-foreground: #2A2A2A;
+  --primary: #8B1E24;
+  --primary-foreground: #F8F5F0;
+  --secondary: #EDE8E0;
+  --secondary-foreground: #2A2A2A;
+  --muted: #EDE8E0;
+  --muted-foreground: #6B7280;
+  --accent: #D4AF37;
+  --accent-foreground: #2A2A2A;
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: #D4AF37 / 20%;
+  --input: #EDE8E0;
+  --ring: #8B1E24;
+  --chart-1: #8B1E24;
+  --chart-2: #D4AF37;
+  --chart-3: #6B1519;
+  --chart-4: #E8D48B;
+  --chart-5: #2A2A2A;
+  --radius: 0.5rem;
+  --sidebar: #2A2A2A;
+  --sidebar-foreground: #F8F5F0;
+  --sidebar-primary: #8B1E24;
+  --sidebar-primary-foreground: #F8F5F0;
+  --sidebar-accent: #3D3D3D;
+  --sidebar-accent-foreground: #F8F5F0;
+  --sidebar-border: #3D3D3D;
+  --sidebar-ring: #D4AF37;
+}
+
+/* ===== Dark Theme ===== */
+.dark {
+  --background: #1A1A1A;
+  --foreground: #F8F5F0;
+  --card: #2A2A2A;
+  --card-foreground: #F8F5F0;
+  --popover: #2A2A2A;
+  --popover-foreground: #F8F5F0;
+  --primary: #D4AF37;
+  --primary-foreground: #2A2A2A;
+  --secondary: #3D3D3D;
+  --secondary-foreground: #F8F5F0;
+  --muted: #3D3D3D;
+  --muted-foreground: #9CA3AF;
+  --accent: #8B1E24;
+  --accent-foreground: #F8F5F0;
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: #D4AF37 / 30%;
+  --input: #3D3D3D;
+  --ring: #D4AF37;
+  --chart-1: #D4AF37;
+  --chart-2: #8B1E24;
+  --chart-3: #E8D48B;
+  --chart-4: #6B1519;
+  --chart-5: #F8F5F0;
+  --sidebar: #1A1A1A;
+  --sidebar-foreground: #F8F5F0;
+  --sidebar-primary: #D4AF37;
+  --sidebar-primary-foreground: #2A2A2A;
+  --sidebar-accent: #2A2A2A;
+  --sidebar-accent-foreground: #F8F5F0;
+  --sidebar-border: #3D3D3D;
+  --sidebar-ring: #8B1E24;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  /* Custom scrollbar for museum feel */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--color-cream);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-deep-red);
+    border-radius: 3px;
+  }
+}
+
+/* ===== Utility Layers ===== */
+@utility text-balance {
+  text-wrap: balance;
+}
+
+@utility glass {
+  background: rgb(42 42 42 / 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgb(212 175 55 / 0.15);
+}
+
+@utility glass-light {
+  background: rgb(248 245 240 / 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgb(139 30 36 / 0.1);
+}

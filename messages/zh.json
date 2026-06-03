@@ -1,0 +1,44 @@
+{
+  "common": {
+    "brandName": "云上长征",
+    "brandTagline": "Cloud Long March",
+    "loading": "加载中...",
+    "error": "页面加载出错",
+    "notFound": "页面未找到"
+  },
+  "homepage": {
+    "museumTitle": "云上长征 数字展馆",
+    "museumSubtitle": "川蜀红色特产文化之旅",
+    "exploreMap": "点击地图探索",
+    "galleryTitle": "产品展厅",
+    "culturalIntroTitle": "长征精神的当代传承",
+    "culturalIntroText": "每一款川蜀特产，都承载着一段长征路上的动人故事。从雪域高原到剑门雄关，从蒙顶茶山到赤水河畔，革命先辈的足迹与当地百姓的真情，凝结成这片土地最珍贵的馈赠。"
+  },
+  "product": {
+    "storyTitle": "长征故事",
+    "productTitle": "产品介绍",
+    "originTitle": "产地溯源",
+    "culturalTitle": "文化价值",
+    "backToHome": "返回首页",
+    "languageLabel": "语言",
+    "audioPlay": "播放",
+    "audioPause": "暂停",
+    "audioListenCN": "聆听长征故事",
+    "audioListenEN": "Listening to the Long March Story",
+    "audioTapToListen": "点击聆听长征故事",
+    "audioStoryPaused": "故事已暂停",
+    "scrollDown": "向下滚动探索"
+  },
+  "audio": {
+    "chinese": "中文",
+    "english": "English",
+    "duration": "时长",
+    "progress": "进度"
+  },
+  "footer": {
+    "copyright": "© 2026 云上长征 Cloud Long March. All rights reserved.",
+    "about": "关于我们",
+    "contact": "联系我们",
+    "privacy": "隐私政策"
+  }
+}
