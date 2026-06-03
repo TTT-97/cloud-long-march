@@ -18,7 +18,7 @@ export function ProductDetailSection({ data, locale }: ProductDetailSectionProps
       <div className="mx-auto max-w-5xl">
         <div className="grid gap-12 lg:grid-cols-2 lg:items-start">
           {/* Product image */}
-          <div className="sticky top-24 overflow-hidden rounded-lg bg-cream-dark">
+          <div className="overflow-hidden rounded-lg bg-cream-dark lg:sticky lg:top-24">
             <img
               src={data.heroImage}
               alt={locale === 'zh' ? data.chineseName : data.englishName}

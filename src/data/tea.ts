@@ -12,16 +12,16 @@ const teaData: ProductData = {
   audio: '/audio/tea.mp3',
   audioDuration: 260,
   storyCN: [
-    '长征途中，不仅有枪林弹雨，还有悄无声息的生死考验。1935年，数百名红四方面军的女战士在川西北茶区与主力失散，陷入了国民党的白色恐怖之中。',
-    '在汶川、茂县的龙门山茶区，这些年轻的女性红军换上破烂衣衫，隐姓埋名，化身"采茶女"。白天，她们低头揉捻茶叶，用熟练的手法掩盖身份；夜晚，她们躲在阴冷潮湿的茶棚里，用茶汁涂抹伤口消炎，用茶叶熬水抵御严寒。',
-    '茶香，成了她们最好的掩护；茶棚，成了她们最后的堡垒。这些20出头的少女在至暗时刻展现出了惊人的隐忍与智慧。她们在茶林中生活了数月甚至数年，直到局势缓和才重新找到队伍。',
-    '我们赋予它 Resilience Brew—坚韧之饮的品牌灵魂。这不仅仅是一杯有机高山茶，这背后是20岁少女们在至暗时刻展现出的惊人隐忍。这款茶讲述的是"绝对纯粹的东方草木"与"不可征服的女性力量"相结合的传奇。'
+    '长征途中，不仅有枪林弹雨，还有悄无声息的生死考验。1935年，数百名红四方面军的女战士在川西北茶区与主力失散。',
+    '在国民党的白色恐怖下，她们换上破烂衣衫，化身"采茶女"。白天，她们低头揉捻茶叶，以此掩盖身份；夜晚，她们躲在阴冷潮湿的茶棚里，用茶汁涂抹伤口消炎，用茶叶熬水抵御严寒。',
+    '茶香，成了她们最好的掩护；茶棚，成了她们最后的堡垒。',
+    '我们将这段历史转化为品牌灵魂：这不仅仅是一杯有机高山茶，这背后是20岁少女们在至暗时刻展现出的惊人隐忍。这款茶推向海外，讲述的是"绝对纯粹的东方草木"与"不可征服的女性力量"相结合的传奇。'
   ],
   storyEN: [
-    'The Long March involved not only bullets and battlefields but also silent, invisible tests of life and death. In 1935, hundreds of female soldiers from the Red Fourth Front Army were separated from the main force in the tea-growing regions of northwestern Sichuan, trapped amid the Nationalist "White Terror."',
-    'In the Longmen Mountain tea regions of Wenchuan and Mao County, these young women changed into tattered clothes, concealed their identities, and transformed into "tea-picking girls." By day, they bent over tea leaves, kneading and rolling with practiced hands to hide who they really were. At night, they huddled in cold, damp tea sheds, applying tea sap to wounds as an antiseptic and brewing tea to ward off the bitter cold.',
-    'The fragrance of tea became their best camouflage; the tea sheds became their final fortress. These young women, barely in their twenties, demonstrated astonishing resilience and wisdom in the darkest of times. They lived in the tea forests for months—even years—until the situation eased and they could rejoin their comrades.',
-    'We give this tea the soul of Resilience Brew. It is more than an organic alpine tea—it carries the story of incredible fortitude shown by young women in the darkest hour. This tea tells the legend of "absolutely pure Eastern botanicals" united with "an unconquerable feminine strength."'
+    'In the misty highlands, tea is more than a beverage; it is a shield. During the turbulent 1930s, hundreds of young female soldiers, separated from their main force, faced imminent danger.',
+    'Disguised as local tea pickers, they hid in the tea plantations. By day, they plucked leaves to mask their identities; by night, they brewed the very tea to heal their wounds and ward off the freezing chill.',
+    'The soothing aroma of these leaves hid their fear, and the tannins healed their bodies.',
+    'Brand Soul: Steeped in courage. A mystical highland blend honoring the unbreakable spirit of women. Every cup is a sip of pure, wild mountain energy, carrying a century-old secret of strength.'
   ],
   productCN: [
     '蒙顶山茶产自四川雅安蒙顶山，是中国最古老的名茶产区之一，种植历史超过2000年。汶川高山茶生长在龙门山脉海拔1500米以上的云雾带，茶树与原始森林共生。',
@@ -32,8 +32,8 @@ const teaData: ProductData = {
     'The tea features tightly rolled leaves, a vivid green color, a bright infusion, a clean and lasting aroma, and a fresh, sweet finish. Organically grown, hand-picked, and refined through traditional craftsmanship.'
   ],
   location: {
-    regionCN: '雅安蒙顶山、汶川茂县龙门山茶区',
-    regionEN: 'Mengding Mountain, Ya\'an; Longmen Mountain Tea Region, Wenchuan/Mao County',
+    regionCN: '汶川、茂县等龙门山茶区',
+    regionEN: 'Longmen Mountain Tea Region, Wenchuan/Mao County',
   },
   coordinates: { x: 32, y: 42 },
   geoCoordinates: { lat: 31.5, lng: 103.6 },

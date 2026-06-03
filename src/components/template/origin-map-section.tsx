@@ -1,20 +1,9 @@
 'use client';
 
-import dynamic from 'next/dynamic';
 import { FadeInView } from '@/components/animations/fade-in-view';
 import { TextReveal } from '@/components/animations/text-reveal';
+import { OriginLeafletMap } from './origin-leaflet-map';
 import type { ProductData } from '@/data/types';
-
-const OriginLeafletMap = dynamic(
-  () => import('./origin-leaflet-map').then((mod) => mod.OriginLeafletMap),
-  { ssr: false, loading: () => <MapSkeleton /> }
-);
-
-function MapSkeleton() {
-  return (
-    <div className="mx-auto aspect-[16/10] max-w-lg animate-pulse rounded-lg bg-dark/5" />
-  );
-}
 
 interface OriginMapSectionProps {
   data: ProductData;
@@ -38,8 +27,7 @@ export function OriginMapSection({ data, locale }: OriginMapSectionProps) {
           {/* Leaflet map */}
           <div className="mx-auto max-w-lg">
             <OriginLeafletMap
-              lat={data.geoCoordinates.lat}
-              lng={data.geoCoordinates.lng}
+              slug={data.slug}
               name={locale === 'zh' ? data.chineseName : data.englishName}
               region={region}
             />

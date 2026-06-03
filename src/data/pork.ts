@@ -12,16 +12,16 @@ const porkData: ProductData = {
   audio: '/audio/pork.mp3',
   audioDuration: 245,
   storyCN: [
-    '1935年，红军在川西北的雪域高原面临着最严峻的补给危机。在海拔4000米的严寒中，粮食耗尽、物资匮乏，部队陷入生死存亡的绝境。',
-    '但当地的藏羌同胞，用最朴素的热情化解了这场危机。在丹巴、理县一带，老百姓自发发起了"筹粮草"运动。他们不仅为红军当向导、掩护伤员，更做出了一个惊人的决定：把自家留着过年、甚至准备当做种子的腊肉和猪膘全都拿出来，一背篓一背篓地送进深山。',
-    '为了让红军吃饱打胜仗，当地群众甚至挖野菜充饥，也要把节省下来的炒面和玉米花送给红军。藏羌同胞与红军在生死边缘结下了绝对的信任。',
-    '我们将这段佳话浓缩为 Alpine Tribute—高原贡品。这款对标欧洲顶级火腿的藏香猪腊肉，承载的不仅是雪域高原的纯净风味，更是少数民族同胞与红军在生死边缘结下的绝对信任。吃下一口，品味的是跨越百年的团结与真诚。'
+    '1935年，红军在川西北的雪域高原面临绝境。当地的藏羌同胞，用最朴素的热情化解了这场危机。',
+    '在甘孜丹巴、阿坝理县一带，老百姓自发筹粮。他们不仅为红军当向导，更做出了惊人的决定：把自家留着过年、甚至准备播种的腊肉和猪膘全都拿出来，一背篓一背篓地送进深山。',
+    '为了让红军吃饱打胜仗，当地群众甚至挖野菜充饥，也要把节省下来的炒面和玉米花送给红军。',
+    '我们将这段佳话浓缩为品牌灵魂：这款对标欧洲顶级火腿的藏香猪腊肉，承载的不仅是雪域高原的纯净风味，更是少数民族同胞与红军在生死边缘结下的绝对信任。'
   ],
   storyEN: [
-    'In 1935, the Red Army faced its most severe supply crisis on the snowy highlands of northwestern Sichuan. At altitudes above 4,000 meters, with food exhausted and supplies depleted, the troops found themselves in a life-or-death struggle against the elements.',
-    'But the local Tibetan and Qiang people resolved this crisis with their profound warmth and generosity. In Danba and Li County, civilians spontaneously launched a "grain collection" campaign. They not only guided the Red Army and sheltered the wounded but made an extraordinary decision: they brought out their entire stock of cured pork and lard—reserved for the New Year or even set aside as breeding stock—and carried it, basket by basket, into the mountains.',
-    'To ensure the Red Army could eat and fight, local villagers foraged wild greens to feed themselves while saving their roasted barley flour and puffed corn for the soldiers. In this moment, an unshakeable bond of trust was forged between the ethnic minorities and the Red Army at the edge of survival.',
-    'We have distilled this story into Alpine Tribute. This Tibetan fragrant pig cured pork, worthy of comparison with Europe\'s finest hams, carries not only the pure flavor of the snow-capped highlands but the absolute trust forged between ethnic minorities and the Red Army. Every bite tastes of a century-spanning bond of unity and sincerity.'
+    'In the harsh winters of 1935, on the remote Tibetan Plateau, a starving army was on the brink of survival. Instead of taking by force, they earned something far greater: absolute trust.',
+    'Local villagers, moved by the army\'s integrity, made an astonishing sacrifice. They gave away their most precious possessions—pork hams and cured meats saved for the New Year—carrying them basket by basket into the deep mountains to feed the soldiers.',
+    'Some even ate wild vegetables themselves just to save every last grain of corn for the troops.',
+    'Brand Soul: A century-old bond of trust, cured to perfection in the pure alpine air. This isn\'t just meat; it\'s a taste of the unbreakable brotherhood forged in the snow.'
   ],
   productCN: [
     '甘孜/阿坝老腊肉选用川西北高原散养的藏香猪，在海拔3000米以上的纯净环境中自然生长。采用传统古法腌制，经高原寒风自然风干，肉质紧实、腊香浓郁。',

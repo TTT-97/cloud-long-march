@@ -12,16 +12,14 @@ const liquorData: ProductData = {
   audio: '/audio/liquor.mp3',
   audioDuration: 240,
   storyCN: [
-    '1935年冬，红军在邛崃建立了苏维埃政权。在这片酿酒历史悠久的土地上，发生了一个关于承诺与传承的感人故事。',
-    '当地制陶匠人陈家为了支持革命，连夜烧制了一批红陶碗，并在碗壁上刻下了"活捉薛岳，赤化全川"的铮铮誓言，亲手交给红军。同年，老中医张崇荣冒着生命危险进山为红军伤员采药熬药。',
-    '红军撤离时，坚持付给张崇荣一根扁担作为医药费，告诉他："革命成功后，拿着这根扁担去找政府。"这根扁担被张家三代人珍藏了近70年，直到2005年才捐献给邛崃红军长征纪念馆。',
-    '这便是我们的 Liquid Courage—壮行酒。昔日，邛崃的泥土烧制了盛满军民鱼水情的"红军碗"；今天，我们用同样的泥窖，酿造出口感醇厚的邛酒。从当年碗里的粗茶淡饭，到如今杯中的琼浆玉液，这瓶酒完成了从苦难到辉煌的百年蜕变。'
+    '1935年冬，红军在邛崃建立苏维埃政权。当地制陶匠人陈家为了支持革命，连夜烧制了一批红陶碗，并在碗壁上刻下了"活捉薛岳，赤化全川"的铮铮誓言，亲手交给红军。',
+    '同年，老中医张崇荣冒死进山为红军伤员采药熬药。红军撤离时，坚持付给他一根扁担作为医药费，告诉他："革命成功后，拿着这根扁担去找政府。"这根扁担被张家三代人当作传家宝珍藏了近70年。',
+    '我们将这段历史转化为品牌灵魂：昔日，邛崃的泥土烧制了盛满军民鱼水情的"红军碗"；今天，我们用同样的泥窖，酿造出口感醇厚的邛酒。从当年碗里的粗茶淡饭，到如今杯中的琼浆玉液，这瓶酒完成了从苦难到辉煌的百年蜕变。'
   ],
   storyEN: [
-    'In the winter of 1935, the Red Army established a Soviet government in Qionglai. In this land with a long tradition of liquor-making, a touching story of promises and heritage unfolded.',
-    'A local potter named Chen, eager to support the revolution, worked through the night to fire a batch of red clay bowls, inscribing on them the oath "Capture Xue Yue alive, spread communism across all Sichuan" before personally delivering them to the Red Army. That same year, an elderly traditional Chinese doctor named Zhang Chongrong risked his life venturing into the mountains to gather herbs and brew medicine for wounded soldiers.',
-    'When the Red Army withdrew, they insisted on giving Zhang a carrying pole as payment, telling him: "When the revolution succeeds, bring this pole to the government." The Zhang family treasured this pole for three generations—nearly 70 years—before finally donating it to the Qionglai Red Army Long March Memorial in 2005.',
-    'This is our Liquid Courage. Long ago, Qionglai\'s clay fired "Red Army bowls" filled with the bond between soldiers and civilians. Today, from the same clay pits, we craft a mellow, full-bodied Qionglai liquor. From humble tea in those clay bowls to fine spirits in today\'s glasses, this bottle completes a century-long journey from hardship to glory.'
+    'In 1935, a local potter carved his hopes for peace onto simple clay bowls, gifting them to weary soldiers passing through his village. Around the same time, a local herbalist risked his life to treat wounded soldiers in the mountains.',
+    'When the army insisted on paying him with a simple wooden shoulder pole, he kept it as a family heirloom for 70 years. Today, we use the same local clay and subterranean cellars to distill this premium spirit.',
+    'Brand Soul: From shared hardships to liquid triumph. Taste the craftsmanship. Feel the history. This spirit connects the rustic simplicity of a clay bowl to the refined elegance of a toast, celebrating a century of perseverance.'
   ],
   productCN: [
     '邛崃是中国最古老的酿酒产区之一，拥有2300多年的酿酒历史。邛酒以优质高粱、小麦为原料，采用传统泥窖固态发酵工艺，酒体醇厚、窖香浓郁、回味悠长。',
