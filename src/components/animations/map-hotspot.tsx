@@ -45,7 +45,7 @@ export function MapHotspot({ waypoint, product, cx, cy, isLighthouse, onSelect }
           x={cx}
           y={cy - 14}
           textAnchor="middle"
-          className="text-[9px] fill-dark/30"
+          className="text-[11px] fill-dark/30"
           style={{ fontFamily: 'system-ui, sans-serif' }}
         >
           {name}
@@ -69,102 +69,51 @@ export function MapHotspot({ waypoint, product, cx, cy, isLighthouse, onSelect }
     >
       {isLighthouse ? (
         <>
-          {/* Qionglai golden lighthouse — outermost glow */}
+          {/* Qionglai red star marker */}
           <defs>
-            <radialGradient id={`lighthouse-glow-${waypoint.id}`} cx="50%" cy="50%" r="50%">
-              <stop offset="0%" stopColor="#D4AF37" stopOpacity={0.5} />
-              <stop offset="30%" stopColor="#D4AF37" stopOpacity={0.15} />
+            <radialGradient id={`star-glow-${waypoint.id}`} cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stopColor="#8B1E24" stopOpacity={0.5} />
+              <stop offset="30%" stopColor="#8B1E24" stopOpacity={0.15} />
               <stop offset="60%" stopColor="#D4AF37" stopOpacity={0.05} />
               <stop offset="100%" stopColor="#D4AF37" stopOpacity={0} />
             </radialGradient>
           </defs>
-          <circle
-            cx={cx}
-            cy={cy}
-            r={60}
-            fill={`url(#lighthouse-glow-${waypoint.id})`}
-          />
+          <circle cx={cx} cy={cy} r={50} fill={`url(#star-glow-${waypoint.id})`} />
 
-          {/* Vertical beacon light beam — shining upward */}
-          <motion.polygon
-            points={`${cx - 8},${cy - 5} ${cx + 8},${cy - 5} ${cx + 20},${cy - 110} ${cx - 20},${cy - 110}`}
-            fill="url(#beacon-beam)"
-            animate={{ opacity: [0.3, 0.7, 0.3] }}
-            transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
-          />
-          {/* Narrower inner beam */}
-          <motion.polygon
-            points={`${cx - 4},${cy - 3} ${cx + 4},${cy - 3} ${cx + 10},${cy - 90} ${cx - 10},${cy - 90}`}
-            fill="url(#beacon-beam)"
-            animate={{ opacity: [0.5, 0.9, 0.5] }}
-            transition={{ duration: 2.5, repeat: Infinity, ease: 'easeInOut', delay: 0.4 }}
-          />
-
-          {/* Lighthouse rings — 5 staggered breathing rings */}
+          {/* Breathing red rings */}
           <motion.circle
-            cx={cx}
-            cy={cy}
-            r={12}
-            fill="none"
-            stroke="#D4AF37"
-            strokeWidth={2.5}
-            style={{ filter: 'blur(3px)' }}
-            animate={{ r: [12, 34, 12], opacity: [0.7, 0, 0.7] }}
+            cx={cx} cy={cy} r={14}
+            fill="none" stroke="#8B1E24" strokeWidth={2}
+            animate={{ r: [14, 32, 14], opacity: [0.6, 0, 0.6] }}
             transition={{ duration: 2.5, repeat: Infinity, ease: 'easeInOut' }}
           />
           <motion.circle
-            cx={cx}
-            cy={cy}
-            r={10}
-            fill="none"
-            stroke="#D4AF37"
-            strokeWidth={2}
-            style={{ filter: 'blur(2px)' }}
-            animate={{ r: [10, 26, 10], opacity: [0.9, 0.1, 0.9] }}
-            transition={{ duration: 2.5, repeat: Infinity, ease: 'easeInOut', delay: 0.25 }}
-          />
-          <motion.circle
-            cx={cx}
-            cy={cy}
-            r={6}
-            fill="none"
-            stroke="#D4AF37"
-            strokeWidth={2.5}
-            animate={{ r: [6, 20, 6], opacity: [1, 0.2, 1] }}
-            transition={{ duration: 2.5, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }}
-          />
-          <motion.circle
-            cx={cx}
-            cy={cy}
-            r={8}
-            fill="none"
-            stroke="#D4AF37"
-            strokeWidth={1.5}
-            style={{ filter: 'blur(1px)' }}
-            animate={{ r: [8, 30, 8], opacity: [0.5, 0, 0.5] }}
-            transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut', delay: 0.7 }}
-          />
-          <motion.circle
-            cx={cx}
-            cy={cy}
-            r={14}
-            fill="none"
-            stroke="#D4AF37"
-            strokeWidth={1}
-            style={{ filter: 'blur(2px)' }}
-            animate={{ r: [14, 38, 14], opacity: [0.3, 0, 0.3] }}
-            transition={{ duration: 3.5, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
+            cx={cx} cy={cy} r={10}
+            fill="none" stroke="#8B1E24" strokeWidth={1.5}
+            animate={{ r: [10, 24, 10], opacity: [0.8, 0.1, 0.8] }}
+            transition={{ duration: 2.5, repeat: Infinity, ease: 'easeInOut', delay: 0.3 }}
           />
 
-          {/* Inner golden core */}
-          <circle cx={cx} cy={cy} r={5} fill="#D4AF37" opacity={0.9} />
-          <motion.circle
-            cx={cx}
-            cy={cy}
-            r={5}
-            fill="#D4AF37"
-            animate={{ opacity: [0.9, 0.3, 0.9], r: [5, 3.5, 5] }}
-            transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
+          {/* Red five-pointed star */}
+          <motion.polygon
+            points={`
+              ${cx},${cy - 12}
+              ${cx + 2.94},${cy - 4.05}
+              ${cx + 11.41},${cy - 3.71}
+              ${cx + 4.76},${cy + 1.55}
+              ${cx + 7.05},${cy + 9.71}
+              ${cx},${cy + 5}
+              ${cx - 7.05},${cy + 9.71}
+              ${cx - 4.76},${cy + 1.55}
+              ${cx - 11.41},${cy - 3.71}
+              ${cx - 2.94},${cy - 4.05}
+            `}
+            fill="#8B1E24"
+            stroke="#D4AF37"
+            strokeWidth={1}
+            animate={{ scale: [1, 1.15, 1], opacity: [1, 0.75, 1] }}
+            transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+            style={{ transformOrigin: `${cx}px ${cy}px` }}
           />
         </>
       ) : (
@@ -199,7 +148,7 @@ export function MapHotspot({ waypoint, product, cx, cy, isLighthouse, onSelect }
         x={cx}
         y={cy + (isLighthouse ? 12 : 0)}
         textAnchor="middle"
-        className={`text-[10px] pointer-events-none ${isLighthouse ? 'fill-gold/60' : 'fill-cream/70'}`}
+        className={`text-[12px] pointer-events-none ${isLighthouse ? 'fill-gold/60' : 'fill-cream/70'}`}
         style={{ fontFamily: 'system-ui, sans-serif' }}
         dy={20}
       >
@@ -231,7 +180,7 @@ export function MapHotspot({ waypoint, product, cx, cy, isLighthouse, onSelect }
               x={cx}
               y={cy + 42}
               textAnchor="middle"
-              className="text-[9px] fill-gold/80"
+              className="text-[11px] fill-gold/80"
               style={{ fontFamily: 'system-ui, sans-serif' }}
             >
               {locale === 'zh' ? product.chineseName : product.englishName}
@@ -240,7 +189,7 @@ export function MapHotspot({ waypoint, product, cx, cy, isLighthouse, onSelect }
               x={cx}
               y={cy + 54}
               textAnchor="middle"
-              className="text-[8px] fill-cream/50"
+              className="text-[10px] fill-cream/50"
               style={{ fontFamily: 'system-ui, sans-serif' }}
             >
               {locale === 'zh' ? '点击探索' : 'Click to explore'}

@@ -227,11 +227,11 @@ export function SichuanIllustratedMap() {
               </motion.g>
 
               {/* ====== City labels (geographic reference, non-route cities) ====== */}
-              <g className="text-[8px] fill-cream/50" fontFamily="system-ui, sans-serif">
-                <text x="380" y="140">成都</text>
-                <text x="350" y="80">汶川</text>
-                <text x="560" y="30">广元</text>
-                <text x="660" y="60">达州</text>
+              <g className="text-[10px] fill-cream/50" fontFamily="system-ui, sans-serif">
+                <text x="380" y="140">{locale === 'zh' ? '成都' : 'Chengdu'}</text>
+                <text x="350" y="80">{locale === 'zh' ? '汶川' : 'Wenchuan'}</text>
+                <text x="560" y="30">{locale === 'zh' ? '广元' : 'Guangyuan'}</text>
+                <text x="660" y="60">{locale === 'zh' ? '达州' : 'Dazhou'}</text>
               </g>
 
               {/* Corner decorative accents */}
@@ -275,7 +275,7 @@ export function SichuanIllustratedMap() {
                 <text
                   x={(ROUTE_WAYPOINTS[0].x / 100) * 800 + 18}
                   y={(ROUTE_WAYPOINTS[0].y / 100) * 295 + 4}
-                  className="text-[8px] fill-dark/30"
+                  className="text-[10px] fill-dark/30"
                   fontFamily="system-ui, sans-serif"
                 >
                   {locale === 'zh' ? '起点' : 'Start'}
@@ -286,7 +286,7 @@ export function SichuanIllustratedMap() {
                 <text
                   x={(ROUTE_WAYPOINTS[ROUTE_WAYPOINTS.length - 1].x / 100) * 800 - 24}
                   y={(ROUTE_WAYPOINTS[ROUTE_WAYPOINTS.length - 1].y / 100) * 295 - 10}
-                  className="text-[8px] fill-dark/30"
+                  className="text-[10px] fill-dark/30"
                   fontFamily="system-ui, sans-serif"
                 >
                   {locale === 'zh' ? '终点' : 'End'}
@@ -298,7 +298,7 @@ export function SichuanIllustratedMap() {
                 x="400"
                 y="285"
                 textAnchor="middle"
-                className="text-[9px] fill-dark/15"
+                className="text-[11px] fill-dark/15"
                 fontFamily="system-ui, sans-serif"
               >
                 {locale === 'zh'
