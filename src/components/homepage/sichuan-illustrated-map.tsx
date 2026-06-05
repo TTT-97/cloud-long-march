@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef, useMemo } from 'react';
+import { useState, useRef, useMemo, useEffect } from 'react';
 import { motion, useScroll, useTransform, useReducedMotion } from 'motion/react';
 import { useLocale } from 'next-intl';
 import { ROUTE_WAYPOINTS } from '@/data/route-waypoints';
@@ -51,6 +51,17 @@ export function SichuanIllustratedMap() {
     ? '点击地图上的光点，探索长征路上的特产故事'
     : 'Tap the glowing points to explore stories along the route';
 
+  // Mobile: scroll to center on Qionglai (邛崃) on mount
+  const mapScrollRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const el = mapScrollRef.current;
+    if (!el || window.innerWidth >= 768) return;
+    // Qionglai at x=44%, SVG width=700px → 308px from left
+    const qionglaiX = 308;
+    const viewportW = el.clientWidth;
+    el.scrollLeft = qionglaiX - viewportW / 2;
+  }, []);
+
   return (
     <>
       <section
@@ -87,17 +98,32 @@ export function SichuanIllustratedMap() {
           </motion.p>
         </div>
 
-        {/* Map container */}
+        {/* Map container — horizontally scrollable on mobile, full-width on desktop */}
         <div className="relative mx-auto w-full">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.97 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+          {/* Edge fade indicators (mobile only) */}
+          <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-8 bg-gradient-to-r from-cream to-transparent md:hidden" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-8 bg-gradient-to-r from-transparent to-cream md:hidden" />
+
+          {/* Swipe hint (mobile only) */}
+          <p className="mb-3 text-center text-[11px] text-dark/25 md:hidden">
+            {locale === 'zh' ? '← 左右滑动查看完整路线 →' : '← Swipe to explore the route →'}
+          </p>
+
+          <div
+            ref={mapScrollRef}
+            className="overflow-x-auto md:overflow-visible"
+            style={{ WebkitOverflowScrolling: 'touch' }}
           >
-            <svg
-              viewBox="0 0 800 295"
-              className="w-full h-auto"
+            <motion.div
+              initial={{ opacity: 0, scale: 0.97 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="w-[700px] md:w-full"
+            >
+              <svg
+                viewBox="0 0 800 295"
+                className="w-full h-auto"
               role="img"
               aria-label={
                 locale === 'zh'
@@ -281,6 +307,7 @@ export function SichuanIllustratedMap() {
               </text>
             </svg>
           </motion.div>
+          </div>
         </div>
 
         {/* Bottom gradient fade to next section */}

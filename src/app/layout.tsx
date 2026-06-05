@@ -15,6 +15,7 @@ export const metadata: Metadata = {
   other: {
     "theme-color": "#8B1E24",
     "apple-mobile-web-app-capable": "yes",
+    "mobile-web-app-capable": "yes",
     "apple-mobile-web-app-status-bar-style": "default",
     "apple-mobile-web-app-title": "云上长征",
   },

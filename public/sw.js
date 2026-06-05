@@ -1,4 +1,4 @@
-const CACHE_NAME = 'cloud-long-march-v2';
+const CACHE_NAME = 'cloud-long-march-v3';
 
 const PRECACHE_URLS = [
   '/offline.html',
@@ -31,15 +31,15 @@ self.addEventListener('fetch', (event) => {
   }
 
   if (pathname.match(/\.(js|css|png|jpg|webp|svg|woff2|mp3|ico)$/)) {
+    // network-first: always try fresh, fall back to cache only when offline
     event.respondWith(
-      caches.match(event.request).then((cached) =>
-        cached ||
-        fetch(event.request).then((response) => {
+      fetch(event.request)
+        .then((response) => {
           const clone = response.clone();
           caches.open(CACHE_NAME).then((cache) => cache.put(event.request, clone));
           return response;
         })
-      )
+        .catch(() => caches.match(event.request))
     );
     return;
   }
